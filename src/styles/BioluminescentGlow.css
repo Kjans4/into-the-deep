@@ -1,0 +1,50 @@
+.glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0;
+  animation: pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.bio-glow-1 {
+  background: radial-gradient(circle, rgba(64, 224, 208, 0.4) 0%, transparent 70%);
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.bio-glow-2 {
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, transparent 70%);
+  top: 60%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+.bio-glow-3 {
+  background: radial-gradient(circle, rgba(0, 191, 255, 0.3) 0%, transparent 70%);
+  top: 40%;
+  left: 60%;
+  animation-delay: 3s;
+}
+
+@media (max-width: 768px) {
+  .glow {
+    width: 100px;
+    height: 100px;
+    filter: blur(30px);
+  }
+}
