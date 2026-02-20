@@ -9,7 +9,7 @@
 }
 
 .ending {
-  min-height: 100vh;
+  min-height: 300vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -26,6 +26,9 @@
   text-align: center;
   opacity: 0;
   animation: fadeInSlow 3s ease-out 1s forwards;
+  position: sticky;
+  top: 50vh;
+  transform: translateY(-50%);
 }
 
 @keyframes fadeInSlow {
