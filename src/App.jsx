@@ -1,6 +1,7 @@
 import React from 'react';
 import { useScrollDepth } from './hooks/useScrollDepth';
 import { depthZones, colorStops } from './Data/depthZones';
+import { creatures, milestones, depthLines } from './data/creatures';
 import DepthIndicator from './components/DepthIndicator';
 import DepthZone from './components/DepthZone';
 import ParticleLayer from './components/ParticleLayer';
@@ -74,7 +75,13 @@ const App = () => {
 
       {/* Depth Zones */}
       {depthZones.map(zone => (
-        <DepthZone key={zone.id} zone={zone} />
+        <DepthZone 
+          key={zone.id} 
+          zone={zone}
+          creatures={creatures}
+          milestones={milestones}
+          depthLines={depthLines}
+        />
       ))}
 
       {/* Ending */}
