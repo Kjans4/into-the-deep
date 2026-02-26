@@ -12,9 +12,7 @@ import './App.css';
 const App = () => {
   const { currentDepth, zoneName, pressure } = useScrollDepth();
 
-  // Calculate background gradient based on current depth
   const getBackgroundGradient = () => {
-    // Find the two color stops we're between
     let lowerStop = colorStops[0];
     let upperStop = colorStops[1];
 
@@ -28,13 +26,10 @@ const App = () => {
       }
     }
 
-    // Interpolation factor
     const range = upperStop.depth - lowerStop.depth;
     const t = (currentDepth - lowerStop.depth) / range;
 
-    // Simple interpolation between color stops
     const interpolateColor = (color1, color2, factor) => {
-      // Parse hex colors
       const hex1 = color1.replace('#', '');
       const hex2 = color2.replace('#', '');
       

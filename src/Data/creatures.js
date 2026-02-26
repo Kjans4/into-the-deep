@@ -1,6 +1,4 @@
-// Creatures database - Neal.fun inspired content
 export const creatures = [
-  // SURFACE ZONE (0-200m)
   { 
     name: 'Sea Turtle', 
     emoji: '🐢', 
